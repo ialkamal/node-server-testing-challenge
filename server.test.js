@@ -8,7 +8,7 @@ describe("Test Request Handlers", () => {
       .get("/projects")
       .then((res) => {
         response = res;
-        expect(JSON.parse(response.text)).toHaveLength(3);
+        expect(response.body).toHaveLength(3);
       });
   });
   test("GET /projects check status", () => {
